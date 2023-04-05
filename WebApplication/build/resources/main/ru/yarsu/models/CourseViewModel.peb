@@ -1,0 +1,37 @@
+    {% extends "./layout.peb" %}
+
+        {% block title %}
+        {{ model.course.courseName }}
+        {% endblock %}
+        {% block h_1 %}{% block h_1 %}Главная страница{% endblock %}{% endblock %}
+    {% block content %}
+    <div class="grid-x grid-padding-x">
+        <div class="cell large-12">
+            <div class="card">
+                <div class="card-divider">
+                    <h4>{{ model.course.courseName }}</h4>
+                </div>
+                <div class="card-section">
+                    <h4>{{ model.course.lecturerFullName }}</h4>
+                    <h4>{{ model.course.description }}</h4>
+                </div>
+            </div>
+            {% for i in model.scheduleItemList %}
+                {% if  i.courseId == model.course.id %}
+                    <div class="card">
+                        <div class="card-divider">
+                            <h3>{{ i.courseId }}</h3>
+                        </div>
+                        <div class="card-section">
+                            <h4>{{ i.auditoriumNumber }}</h4>
+
+                            <h4>{{ i.dayOfWeek }}</h4>
+
+                            <h4>{{ i.startTime }}</h4>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    {% endblock %}

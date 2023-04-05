@@ -1,0 +1,12 @@
+    {% extends "./layout.peb" %}
+
+        {% block title %}
+        Главная страница
+        {% endblock %}
+
+    {% block content %}
+    <div class="grid-x grid-padding-x">
+        <div class="cell large-12">
+        </div>
+    </div>
+    {% endblock %}

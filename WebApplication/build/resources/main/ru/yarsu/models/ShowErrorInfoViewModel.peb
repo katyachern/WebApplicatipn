@@ -1,0 +1,14 @@
+{% extends "./layout.peb" %}
+
+{% block content %}
+
+<div class="grid-x grid-padding-x">
+    <div class="medium-12 cell">
+        <p>Вы выполнили запрос к несуществующей странице</p>
+        <p>Адрес запроса: {{ model.uri }}</p>
+        <p>Пожалуйста сообщите о данной ошибке администратору</p>
+        <p>Вернуться к <a href="/">основному содержимому</a></p>
+    </div>
+</div>
+
+{% endblock %}

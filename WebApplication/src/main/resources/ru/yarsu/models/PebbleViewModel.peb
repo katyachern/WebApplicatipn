@@ -1,0 +1,13 @@
+{% extends "./layout.peb" %}
+
+{% block title %}
+    Тестовый вывод информации
+{% endblock %}
+
+{% block content %}
+    <div class="grid-x grid-padding-x">
+        <div class="cell large-12">
+            {{ model.description }}
+        </div>
+    </div>
+{% endblock %}

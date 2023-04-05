@@ -1,0 +1,51 @@
+<!doctype html>
+<html class="no-js" lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Главная страница{% endblock %}</title>
+    <link rel="stylesheet" href="/css/foundation.css">
+    <link rel="stylesheet" href="/css/app.css">
+  </head>
+<body>
+
+<div class="grid-container">
+    <div class="grid-x grid-padding-x">
+        <div class="large-12 cell">
+            <h1>{% block h_1 %}Главная страница{% endblock %}</h1>
+        </div>
+    </div>
+
+    <div class="top-bar">
+        <div class="top-bar-left">
+                {% block navig %}
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li class="menu-text">Меню:</li>
+                    <li>
+                        <a href="/courses/">Список курсов</a>
+                    </li>
+                    <li>
+                        <a href="/">Главное меню</a>
+                    </li>
+                </ul>
+                {% endblock %}
+        </div>
+    </div>
+</div>
+
+
+<div class="grid-container">
+
+{% block content %}
+    Нет содержимого
+{% endblock %}
+
+</div>
+
+    <script src="/js/vendor/jquery.js"></script>
+    <script src="/js/vendor/what-input.js"></script>
+    <script src="/js/vendor/foundation.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
+</html>
